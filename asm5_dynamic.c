@@ -18,16 +18,16 @@ int main() {
 
     do {
         scanf("%d", &num);
-        node *new_node = (node*)malloc(sizeof(node));
-        new_node->data = num;
-        new_node->next = NULL;
+        node *newNode = (node*)malloc(sizeof(node));
+        newNode->data = num;
+        newNode->next = NULL;
 
         if (head == NULL) {
-            head = new_node;
-            tail = new_node;
+            head = newNode;
+            tail = newNode;
         } else {
-            tail->next = new_node;
-            tail = new_node;
+            tail->next = newNode;
+            tail = newNode;
         }
 
         countAdd++;
@@ -42,6 +42,7 @@ int main() {
 
     // Remove part ***********************************************
     printf("\nEnter 3 integers to remove: ");
+
     do {
         scanf("%d", &input);
         removeArr[countRemove] = input;
@@ -49,16 +50,16 @@ int main() {
     } while (countRemove < 3);
 
     current = head;
-    node *prev = NULL;
+    node *previous = NULL;
     int index = 0;
 
     while (current != NULL) {
         for (i = 0; i < 3; i++) {
             if (index == removeArr[i]) {
-                if (prev == NULL) {
+                if (previous == NULL) {
                     head = current->next;
                 } else {
-                    prev->next = current->next;
+                    previous->next = current->next;
                 }
                 free(current);
                 break;
@@ -69,9 +70,9 @@ int main() {
             if (countRemove == 3) {
                 break;
             }
-            current = prev->next;
+            current = previous->next;
         } else {
-            prev = current;
+            previous = current;
             current = current->next;
         }
         index++;
