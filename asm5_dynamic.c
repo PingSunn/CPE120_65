@@ -78,10 +78,10 @@ int main() {
         index++;
     }
 
-    printf("\nThe linked list after removing nodes at indices: ");
-    for (i = 0; i < 3; i++) {
-        printf("%d ", removeArr[i]);
-    }
+    // printf("\nThe linked list after removing nodes at indices: ");
+    // for (i = 0; i < 3; i++) {
+    //     printf("%d ", removeArr[i]);
+    // }
     printf("\nThe linked list is: ");
     current = head;
     while (current != NULL) {
