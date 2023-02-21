@@ -38,10 +38,10 @@ int main() {
     while (current != NULL) {
         printf("%d ", current->data);
         current = current->next;
-    }
+    } //Print zone
 
     // Remove part ***********************************************
-    printf("\nEnter 3 integers to remove: ");
+    printf("\nEnter 3 integers to remove (1-10): ");
 
     do {
         scanf("%d", &input);
@@ -87,7 +87,7 @@ int main() {
     while (current != NULL) {
         printf("%d ", current->data);
         current = current->next;
-    }
+    } //Print zone
 
     return 0;
 }
